@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_main"
+    app:startDestination="@id/main_fragment">
+
+    <fragment
+        android:id="@+id/main_fragment"
+        android:name="com.example.demoservice.fragment.MainFragment"
+        android:label="MainFragment"
+        tools:layout="@layout/fragment_main">
+
+        <action
+            android:id="@+id/main_to_alarm"
+            app:destination="@+id/alarm_fragment" />
+
+        <action
+            android:id="@+id/main_to_foreground"
+            app:destination="@+id/fragment_foreground_service" />
+
+        <action
+            android:id="@+id/main_to_intent"
+            app:destination="@+id/fragment_intent_service" />
+
+        <action
+            android:id="@+id/main_to_bound"
+            app:destination="@+id/fragment_bound_service" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/alarm_fragment"
+        android:name="com.example.demoservice.fragment.AlarmFragment"
+        android:label="AlarmFragment"
+        tools:layout="@layout/fragment_alarm" />
+
+    <fragment
+        android:id="@+id/fragment_foreground_service"
+        android:name="com.example.demoservice.fragment.ForegroundServiceFragment"
+        android:label="ForegroundServiceFragment"
+        tools:layout="@layout/fragment_foreground_service" />
+
+    <fragment
+        android:id="@+id/fragment_intent_service"
+        android:name="com.example.demoservice.fragment.IntentServiceFragment"
+        android:label="IntentServiceFragment"
+        tools:layout="@layout/fragment_intent_service" />
+
+    <fragment
+        android:id="@+id/fragment_bound_service"
+        android:name="com.example.demoservice.fragment.BoundServiceFragment"
+        android:label="BoundServiceFragment"
+        tools:layout="@layout/fragment_bound_service" />
+</navigation>
